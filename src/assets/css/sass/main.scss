@@ -1,0 +1,39 @@
+/* import of other scss files */
+@import './_variables.scss';
+@import './buttons.scss';
+
+/* make sure to import any scss file created here. 
+   Additional stylings can also be added here */
+
+
+/* font face styling */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../fonts/lato-normal-400.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../../fonts/lato-normal-700.ttf) format('truetype');
+}
+/* end of font face styling */
+
+
+html {
+    width: 100%; 
+    height: 100%;
+    background: $background-color;
+}
+
+body {
+    font-family: 'Lato', 'Verdana', sans-serif !important;
+    font-size: 1rem;
+    font-weight: normal;
+    font-variant: normal;
+    background: $background-color;
+}
+
