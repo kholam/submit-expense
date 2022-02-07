@@ -2,7 +2,7 @@ import React from 'react'
 import SVGProps from '../../interface/SVGProps';
 
 // svg component for the logo 
-const Logo = ({ width = 26, height = 30, className }: SVGProps): React.ReactElement => {
+const AppIcon = ({ width = 26, height = 30, className }: SVGProps): React.ReactElement => {
     return (
         <svg width={`${width}`} height={`${height}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 30" fill="none" className={className}>
             <path d="M22.1078 24.5148H4.922C4.64328 24.5102 4.36756 24.5728 4.11824 24.6974C3.86892 24.8222 3.65336 25.005 3.48984 25.2308L2.2009 26.978C2.02616 27.2066 1.91994 27.48 1.89458 27.7664C1.86923 28.053 1.9258 28.3408 2.0577 28.5964C2.19052 28.8606 2.39564 29.0816 2.64918 29.2336C2.90272 29.3858 3.19426 29.4628 3.48984 29.4556H21.4776C21.7596 29.4542 22.0336 29.3612 22.2582 29.1908C22.4828 29.0204 22.6462 28.7816 22.7236 28.5104L23.3968 26.176C23.4546 25.9842 23.4652 25.781 23.4278 25.584C23.3904 25.387 23.3062 25.202 23.182 25.0446C23.06 24.875 22.8982 24.738 22.711 24.6456C22.5236 24.5532 22.3166 24.5084 22.1078 24.5148Z" fill="#282B34" />
@@ -12,4 +12,4 @@ const Logo = ({ width = 26, height = 30, className }: SVGProps): React.ReactElem
     );
 };
 
-export default Logo;
+export default AppIcon;

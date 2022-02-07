@@ -1,5 +1,5 @@
-import Logo from "./Logo";
+import AppIcon from "./AppIcon";
 
 export {
-    Logo
+    AppIcon
 }
