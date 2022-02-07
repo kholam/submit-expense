@@ -1,5 +1,7 @@
 import AppIcon from "./AppIcon";
+import CloseModalIcon from "./CloseModalIcon";
 
 export {
-    AppIcon
+    AppIcon,
+    CloseModalIcon,
 }
