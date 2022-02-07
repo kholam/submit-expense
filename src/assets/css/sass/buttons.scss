@@ -1,0 +1,36 @@
+/* contains all stylings for the buttons */
+button {
+    font-family: 'Lato', 'Verdana' ,sans-serif !important;
+    color: $primary-color;
+    outline: initial !important;
+}
+
+/* button primary styling */
+.btn-primary {
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    color: $white-color;
+    width: 96px;
+    height: 36px;
+
+    &:hover {
+        background: darken($color: $primary-color, $amount: 5%);
+        border-color: darken($color: $primary-color, $amount: 5%);
+    }
+}
+
+/* button outline styling */
+.btn-outline {
+    background: $white-color;
+    border: 1px solid rgba(29, 28, 29, 0.5);
+    border-radius: 3px;
+    color: $black-color;
+    width: 96px;
+    height: 36px;
+
+    &:hover {
+        background: darken($color: $white-color, $amount: 1.5%);
+        border-color: 1px solid rgba(29, 28, 29, 1.5);
+    }
+}
