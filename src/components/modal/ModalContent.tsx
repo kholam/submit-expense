@@ -10,6 +10,8 @@ const ModalContent = (): React.ReactElement => {
     const [formValues, setFormValues] = useState<FormValues>(initialValues);
     const [isFormValid, setIsFormValid] = useState(false);
     const [errors, setErrors] = useState<FormValues>({} as FormValues);
+    const [isFocus, setIsFocus] = useState(false);
+    const [isBlur, setIsBlur] = useState(false);
 
     // validate the form fields
     // always returns a memoised callback of the updated function to 
@@ -81,6 +83,19 @@ const ModalContent = (): React.ReactElement => {
 
     }, [formValues, validateFormField]);
 
+    const handleBlur = (event: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLSelectElement>) => {
+        setIsBlur(true);
+        setIsFocus(false);
+        console.log(event);
+    };
+
+
+    const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+        setIsFocus(true);
+        setIsBlur(false);
+        console.log(event);
+    }
+
     return (
         <div className="modal-content">
             <form name="testForm">
@@ -96,7 +111,9 @@ const ModalContent = (): React.ReactElement => {
                         required
                         className="input-text"
                         handleChange={handleChange} 
+                        onFocus={handleFocus}
                     />
+                    {isFocus && (<small className="hint-text">Give this expense a title to be easily identified</small>)}
                 </div>
                 {/* purchase date */}
                 <div className="form-purchase-date">
