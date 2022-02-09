@@ -87,6 +87,22 @@ const ModalContent = (): React.ReactElement => {
         setIsBlur(true);
         setIsFocus(false);
         console.log(event);
+
+        // name - field name
+        // value - text entered in the field
+        const { name, value } = event.target;
+
+        // check if field is the amount field
+        if (name === 'amount') {
+            // check is the value is a decimal number
+            if (Number(value) % 1 !== 0) {
+                // display two digits after the decimal number
+                const parsedValue = Number(value).toFixed(2).toString();
+                // update form values and set the field to the new value
+                setFormValues({ ...formValues, amount: parsedValue })
+            }
+        }
+
     };
 
 
@@ -165,6 +181,8 @@ const ModalContent = (): React.ReactElement => {
                         className="input-text"
                         type="number"
                         handleChange={handleChange}
+                        value={formValues.amount}
+                        onBlur={handleBlur}
                     />
                 </div>
             </form>
