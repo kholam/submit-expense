@@ -1,1 +1,156 @@
 // styling for the form
+
+// default styling for input tag text
+.input-font {
+  @extend .font;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+input {
+  @extend .input-text;
+  color: $black-color;
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  @extend .font;
+  font-size: 15px;
+  line-height: 22px;
+  color: $black-color;
+}
+
+.form-title {
+  @extend .flex-column;
+  position: absolute;
+  height: 110px;
+  left: 0px;
+  right: 0px;
+  top: 10px;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.form-purchase-date {
+  @extend .flex-column;
+  position: absolute;
+  height: 88px;
+  left: 0px;
+  right: 0px;
+  top: 120px;
+  margin-left: 28px;
+  margin-right: 28px;
+  padding-right: 28px;
+}
+
+.input-text {
+  @extend .input-font;
+  height: 36px;
+  margin-top: 5px;
+  background: $white-color;
+  border: 1px solid rgba(29, 28, 29, 0.5);
+  border-radius: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+nput::placeholder {
+  display: flex;
+  align-items: center;
+  color: $gray-color-4;
+}
+
+// focus for input text
+.input-text:focus {
+  outline: none !important;
+  border: 1px solid rgba(29, 28, 29, 0.5);  
+}
+
+.hint-text {
+ @extend .font;
+ font-size: 13px;
+ line-height: 18px;
+ color: rgba(29, 28, 29, 0.7);
+ margin-top: 4px;
+}
+
+// remove default icon for opera and webkit browsers
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"] {
+   border: none !important;
+   background: none !important;
+   margin-left: 0 !important;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+
+.input-date-picker {
+  @extend .flex-row, .input-text;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.calendar-icon{
+  position: absolute;
+  right: 12px;
+}
+
+.form-currency {
+  position: absolute;
+  height: 44px;
+  left: 0px;
+  right: 0px;
+  top: 223px;
+  margin-left: 28px;
+  align-items: center;
+}
+
+.select {
+  @extend .font;
+  position: absolute;
+  width: 112px;
+  height: 28px;
+  right: 28px;
+  top: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: $primary-color-foreground;
+  border: 1px solid rgba(29, 28, 29, 0.5);
+  background: $white-color;
+}
+
+select:focus {
+  border: 1px solid rgba(29, 28, 29, 0.5);  
+  outline: none !important;
+}
+
+.form-amount {
+  @extend .flex-column;
+  position: absolute;
+  height: 110px;
+  left: 0px;
+  right: 0px;
+  top: 282px;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.error-message {
+  color: red;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+// end of styling
