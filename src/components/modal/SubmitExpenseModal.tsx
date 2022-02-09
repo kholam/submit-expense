@@ -1,5 +1,5 @@
 import React from "react";
-import { ModalFooter, ModalHeader } from ".";
+import { ModalContent, ModalFooter, ModalHeader } from ".";
 import { SubmitExpenseModalProps } from "../../interface";
 
 const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpenseModalProps): React.ReactElement => {
@@ -12,6 +12,7 @@ const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpense
         <React.Fragment>
             {displayModal && <div className="modal">
                 <ModalHeader displayModal={displayModal} setShowDisplayModal={setShowDisplayModal}/>
+                <ModalContent/>
                 <ModalFooter handleCloseModal={handleCloseModal}/>
             </div>}
         </React.Fragment>
