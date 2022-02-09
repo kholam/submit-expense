@@ -1,11 +1,14 @@
+import React from "react";
+import { SubmitExpenseModalProps } from "../../interface";
 
-const SubmitExpenseModal = (): React.ReactElement => {
-
+const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpenseModalProps): React.ReactElement => {
 
     return (
-        <div>
-            submit expense modal
-        </div>
+        <React.Fragment>
+            {displayModal && <div>
+                submit expense modal
+            </div>}
+        </React.Fragment>
     )
 }; 
 
