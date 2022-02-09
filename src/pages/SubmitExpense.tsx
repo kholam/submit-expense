@@ -12,17 +12,21 @@ const SubmitExpense = (): React.ReactElement => {
 
     return (
         <React.Fragment>
-            <div className="position-relative">
+            <div>
+                {/* horizontally and vertically center button */}
                 <div className="container">
                     <button className='btn btn-primary' onClick={handleButtonClick}>
                         Open
                     </button>
                 </div>
+                {/* end of button display */}
             </div>
+            {/* submit expense modal */}
             <SubmitExpenseModal
                 displayModal={displayModal}
                 setShowDisplayModal={setDisplayModal}
             />
+            {/* end of modal */}
         </React.Fragment>
     );
 };
