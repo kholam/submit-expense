@@ -1,0 +1,16 @@
+/* styling for modal */
+.modal {
+  @extend .container;
+  width: 520px;
+  height: 560px;
+  background: $white-color;
+  border: 1px solid rgba(29, 28, 29, 0.13);
+  border-radius: 16px;
+  z-index: 9999;
+  transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+
+}
+
+// end of styling for modal
