@@ -1,4 +1,4 @@
-import { CSSProperties, AriaAttributes } from "react";
+import React, { CSSProperties, AriaAttributes } from "react";
 
 
 interface SVGProps extends AriaAttributes {
@@ -14,6 +14,9 @@ interface SVGProps extends AriaAttributes {
     width?: number | string | null;
     // height of the svg
     height?: number | string | null;
+    // click event for svg elements
+    onClick?: React.MouseEventHandler<SVGSVGElement> | undefined;
+
 }
 
 export default SVGProps;
