@@ -2,15 +2,15 @@
 // breakpoints for different screens size
 // for now using only xxs, xs, and sm
 $breakpoints: (
-  xxs: 420px,
-  xs: 576px,
-  sm: 768px,
+  xxs: 420px, // extra extra small screens
+  xs: 576px, // extra small screens
+  sm: 768px, // small screens
 );
 
 @mixin respond-below($breakpoint) {
   // check if the breakpoint exists in the map.
   @if map-has-key($breakpoints, $breakpoint) {
-    // Get the breakpoint value.
+    // get the breakpoint value.
     $breakpoint-value: map-get(
       $breakpoints,
       $breakpoint

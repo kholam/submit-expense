@@ -1,3 +1,4 @@
+// list of currencies
 export const currencies = ['EUR', 'USD', 'CNY'];
 
 

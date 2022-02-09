@@ -1,6 +1,6 @@
 import React, { CSSProperties, AriaAttributes } from "react";
 
-
+// props for the SVGs
 interface SVGProps extends AriaAttributes {
     // class names for the svg
     className?: string;

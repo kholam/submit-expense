@@ -55,7 +55,7 @@ input {
   padding-right: 12px;
 }
 
-nput::placeholder {
+input::placeholder {
   display: flex;
   align-items: center;
   color: $gray-color-4;
@@ -67,6 +67,7 @@ nput::placeholder {
   border: 1px solid rgba(29, 28, 29, 0.5);  
 }
 
+// hint text
 .hint-text {
  @extend .font;
  font-size: 13px;
@@ -81,6 +82,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
+// remove border styling from date input
 input[type="date"] {
    border: none !important;
    background: none !important;
@@ -147,6 +149,8 @@ select:focus {
   color: red;
 }
 
+// reduces the brightness and 
+// changes the pointer events for the next button
 .disabled {
   opacity: 0.4;
   cursor: not-allowed !important;

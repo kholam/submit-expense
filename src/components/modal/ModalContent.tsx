@@ -5,16 +5,21 @@ import { Label } from '../form';
 import FormInput from '../form/FormInput';
 import { CalendarIcon } from '../svg';
 
+// custom modal content component
+// displays the form content in the modal
 const ModalContent = ({
     isFormValid,
     setIsFormValid
 }: {
-    isFormValid: boolean
-    setIsFormValid: React.Dispatch<React.SetStateAction<boolean>>;
+    isFormValid: boolean // manages the validity of the form
+    setIsFormValid: React.Dispatch<React.SetStateAction<boolean>>; // set the states of the validity of the form
 }): React.ReactElement => {
+    // form initial values
+    // set the default value for purchaseDate field using today's date
     const initialValues = { title: '', purchaseDate: todaysDate(), currency: '', amount: '' } as FormValues;
+    // form states
     const [formValues, setFormValues] = useState<FormValues>(initialValues);
-    const [errors, setErrors] = useState<FormValues>({} as FormValues);
+    const [errors, setErrors] = useState<FormValues>({} as FormValues); // keeps tracks of errors for each field
     const [isFocus, setIsFocus] = useState(false);
     const [isBlur, setIsBlur] = useState(false);
 
@@ -87,6 +92,7 @@ const ModalContent = ({
         validateFormField(name, value);
 
     }, [formValues, validateFormField]);
+    
 
     const handleBlur = (event: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLSelectElement>) => {
         setIsBlur(true);

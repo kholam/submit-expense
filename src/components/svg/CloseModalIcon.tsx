@@ -1,6 +1,8 @@
 import React from 'react'
 import { SVGProps } from '../../interface';
 
+// close modal svg icon
+// default color is #1D1C1D
 const CloseModalIcon = ({ 
     width = "36", 
     height = "36", 

@@ -17,6 +17,7 @@
 
 }
 
+/* modal header styling*/
 .modal-header {
   @extend .flex-row;
   height: 70px;
@@ -30,6 +31,7 @@
   top: 20px;
 }
 
+// title of the modal
 .modal-title-text {
   font-family: Lato;
   font-style: normal;
@@ -55,7 +57,9 @@
     cursor: pointer;
   }
 }
+/* end of modal header styling*/
 
+/* modal footer styling */
 .modal-footer {
   position: absolute;
   height: 84px;
@@ -75,8 +79,9 @@
 .mr-12 {
   margin-right: 12px;
 }
+/* end of modal footer styling */
 
-
+/* modal content styling */
 .modal-content {
   position: absolute;
   top: 70px;
@@ -85,6 +90,7 @@
   height: 408px;
   overflow-y: scroll;
 
+  // resize the width based on the screen size specified
   @include respond-below(sm){
     width: 320px;
   }

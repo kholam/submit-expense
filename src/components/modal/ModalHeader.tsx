@@ -2,6 +2,7 @@ import React from 'react';
 import { ModalProps } from '../../interface';
 import { AppIcon, CloseModalIcon } from '../svg';
 
+// custom react modal header component based on tje design
 const ModalHeader = ({ handleCloseModal } : ModalProps): React.ReactElement =>{
 
  return (

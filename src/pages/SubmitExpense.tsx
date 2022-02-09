@@ -4,8 +4,9 @@ import { SubmitExpenseModal } from '../components/modal';
 // displays a button that is horizontally and vertically centered on the page
 const SubmitExpense = (): React.ReactElement => {
     const [displayModal, setDisplayModal] = useState(false);
-
+    
     const handleButtonClick = () => {
+        // show modal if true else hide it
         setDisplayModal(!displayModal);
     }
 

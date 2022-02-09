@@ -6,6 +6,7 @@ const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpense
     //manages the forms validity state
     const [isFormValid, setIsFormValid] = useState(false);
 
+    // open and close modal
     const handleCloseModal = () => {
         setShowDisplayModal(!displayModal);
     }
