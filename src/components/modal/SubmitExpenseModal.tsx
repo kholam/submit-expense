@@ -11,7 +11,7 @@ const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpense
     return (
         <React.Fragment>
             {displayModal && <div className="modal">
-                <ModalHeader displayModal={displayModal} setShowDisplayModal={setShowDisplayModal}/>
+                <ModalHeader handleCloseModal={handleCloseModal}/>
                 <ModalContent/>
                 <ModalFooter handleCloseModal={handleCloseModal}/>
             </div>}

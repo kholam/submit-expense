@@ -1,12 +1,8 @@
 import React from 'react';
-import { SubmitExpenseModalProps } from '../../interface';
+import { ModalProps } from '../../interface';
 import { AppIcon, CloseModalIcon } from '../svg';
 
-const ModalHeader = ({ displayModal, setShowDisplayModal }: SubmitExpenseModalProps): React.ReactElement =>{
-
-    const handleCloseModal = () => {
-        setShowDisplayModal(!displayModal);
-    }
+const ModalHeader = ({ handleCloseModal } : ModalProps): React.ReactElement =>{
 
  return (
      <div className="modal-header">
