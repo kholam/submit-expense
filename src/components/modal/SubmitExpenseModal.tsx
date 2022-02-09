@@ -5,7 +5,7 @@ const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpense
 
     return (
         <React.Fragment>
-            {displayModal && <div>
+            {displayModal && <div className="modal">
                 submit expense modal
             </div>}
         </React.Fragment>
