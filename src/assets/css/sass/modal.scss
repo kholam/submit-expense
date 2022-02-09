@@ -13,4 +13,43 @@
 
 }
 
+.modal-header {
+  @extend .flex-row;
+  height: 70px;
+}
+
+.app-icon {
+  position: absolute;
+  width: 26px;
+  height: 30px;
+  left: 28px;
+  top: 20px;
+}
+
+.modal-title-text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #1D1C1D;
+  position: absolute;
+  left: 80px;
+  right: 72px;
+}
+
+.close-icon {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  right: 20px;
+  top: 17px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 // end of styling for modal
