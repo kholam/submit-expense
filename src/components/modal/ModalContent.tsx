@@ -160,11 +160,13 @@ const ModalContent = ({
                 </div>
                 {/* currency selection */}
                 <div className="form-currency">
-                    {(!isFormValid || isBlur) && (
-                        <small className="error-message">{errors.currency}</small>
-                    )}
                     <div className="flex-row">
-                        <Label text="Currency" className="float-right" />
+                        <div className="label-currency-error">
+                        {(!isFormValid || isBlur) && (
+                            <small className="error-message">{errors.currency}</small>
+                        )}
+                        <Label text="Currency" className="" />
+                        </div>
                         <select className="select" name="currency" onChange={handleChange}>
                             <option value=""> </option>
                             {

@@ -113,6 +113,16 @@ input[type="date"] {
   align-items: center;
 }
 
+.label-currency-error {
+@extend .flex-column;
+justify-content: center !important;
+position: absolute;
+left: 0px;
+right: 120px;
+top: 2px;
+bottom: 0px;
+}
+
 .select {
   @extend .font;
   position: absolute;
@@ -122,8 +132,6 @@ input[type="date"] {
   top: 8px;
   font-size: 13px;
   line-height: 18px;
-  display: flex;
-  align-items: center;
   color: $primary-color-foreground;
   border: 1px solid rgba(29, 28, 29, 0.5);
   background: $white-color;
