@@ -1,4 +1,5 @@
 import React from "react";
+import { ModalHeader } from ".";
 import { SubmitExpenseModalProps } from "../../interface";
 
 const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpenseModalProps): React.ReactElement => {
@@ -6,7 +7,7 @@ const SubmitExpenseModal = ({ displayModal, setShowDisplayModal }: SubmitExpense
     return (
         <React.Fragment>
             {displayModal && <div className="modal">
-                submit expense modal
+                <ModalHeader displayModal={displayModal} setShowDisplayModal={setShowDisplayModal}/>
             </div>}
         </React.Fragment>
     )
