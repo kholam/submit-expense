@@ -5,10 +5,15 @@ import { Label } from '../form';
 import FormInput from '../form/FormInput';
 import { CalendarIcon } from '../svg';
 
-const ModalContent = (): React.ReactElement => {
+const ModalContent = ({
+    isFormValid,
+    setIsFormValid
+}: {
+    isFormValid: boolean
+    setIsFormValid: React.Dispatch<React.SetStateAction<boolean>>;
+}): React.ReactElement => {
     const initialValues = { title: '', purchaseDate: todaysDate(), currency: '', amount: '' } as FormValues;
     const [formValues, setFormValues] = useState<FormValues>(initialValues);
-    const [isFormValid, setIsFormValid] = useState(false);
     const [errors, setErrors] = useState<FormValues>({} as FormValues);
     const [isFocus, setIsFocus] = useState(false);
     const [isBlur, setIsBlur] = useState(false);
@@ -69,7 +74,7 @@ const ModalContent = (): React.ReactElement => {
         }
 
 
-    }, [errors])
+    }, [errors, setIsFormValid])
 
     // update form values and validate form field
     const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
@@ -126,7 +131,7 @@ const ModalContent = (): React.ReactElement => {
                         placeholder="Expense Title"
                         required
                         className="input-text"
-                        handleChange={handleChange} 
+                        handleChange={handleChange}
                         onFocus={handleFocus}
                     />
                     {isFocus && (<small className="hint-text">Give this expense a title to be easily identified</small>)}
@@ -149,7 +154,7 @@ const ModalContent = (): React.ReactElement => {
                 </div>
                 {/* currency selection */}
                 <div className="form-currency">
-                    {!isFormValid && (
+                    {(!isFormValid || isBlur) && (
                         <small className="error-message">{errors.currency}</small>
                     )}
                     <div className="flex-row">
