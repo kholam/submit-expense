@@ -11,6 +11,10 @@
 	-moz-transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
 
+   @include respond-below(sm){
+    width: 320px;
+  }
+
 }
 
 .modal-header {
@@ -80,6 +84,10 @@
   width: 520px;
   height: 408px;
   overflow-y: scroll;
+
+  @include respond-below(sm){
+    width: 320px;
+  }
 }
 
 

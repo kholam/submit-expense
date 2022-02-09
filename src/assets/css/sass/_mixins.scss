@@ -1,0 +1,25 @@
+
+// breakpoints for different screens size
+// for now using only xxs, xs, and sm
+$breakpoints: (
+  xxs: 420px,
+  xs: 576px,
+  sm: 768px,
+);
+
+@mixin respond-below($breakpoint) {
+  // check if the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get(
+      $breakpoints,
+      $breakpoint
+    ); 
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+    // breakpoint doesn't exist in the map.
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
