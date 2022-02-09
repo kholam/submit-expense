@@ -52,4 +52,24 @@
   }
 }
 
+.modal-footer {
+  position: absolute;
+  height: 84px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-top: 1px solid $gray-color-3;
+}
+
+.modal-buttons {
+  float: right;
+  @extend .flex-row;
+  margin-right: 28px;
+  margin-top: 24px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
 // end of styling for modal
