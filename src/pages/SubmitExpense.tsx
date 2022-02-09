@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SubmitExpenseModal from '../components/modal/SubmitExpenseModal';
+import { SubmitExpenseModal } from '../components/modal';
 
 // displays a button that is horizontally and vertically centered on the page
 const SubmitExpense = (): React.ReactElement => {
