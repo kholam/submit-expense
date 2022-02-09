@@ -1,5 +1,5 @@
 import React from 'react'
-import SVGProps from '../../interface/SVGProps';
+import { SVGProps } from '../../interface';
 
 const CloseModalIcon = ({ width = "36", height = "36", color = "#1D1C1D", className }: SVGProps): React.ReactElement => {
     return (

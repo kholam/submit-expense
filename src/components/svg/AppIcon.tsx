@@ -1,5 +1,5 @@
 import React from 'react'
-import SVGProps from '../../interface/SVGProps';
+import { SVGProps } from '../../interface';
 
 // svg component for the logo 
 const AppIcon = ({ width = 26, height = 30, className }: SVGProps): React.ReactElement => {

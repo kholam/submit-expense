@@ -1,5 +1,5 @@
 import React from 'react'
-import SVGProps from '../../interface/SVGProps';
+import { SVGProps } from '../../interface';
 
 const CalendarIcon = ({ width = 20, height = 20, color = "#1D1C1D", className }: SVGProps): React.ReactElement => {
     return (
