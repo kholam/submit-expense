@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> Should render correctly 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <div
+      className="container"
+    >
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+      >
+        Open
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SubmitExpense/> Should render correctly 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <div
+      className="container"
+    >
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+      >
+        Open
+      </button>
+    </div>
+  </div>
+</div>
+`;
