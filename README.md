@@ -44,7 +44,7 @@ This application was boostraped with create-react-app.
 To the run the application
 - clone the project 
 ```shell
-git clone https://github.com/DataSciGeek/technical-test.git
+git clone https://github.com/DataSciGeek/submit-expense.git
 ```
 - Open the application in your preferred editor
 - Install the dependencies. To install the dependencies, navigate to the root folder and use the command below. 
